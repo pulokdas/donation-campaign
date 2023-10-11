@@ -7,7 +7,7 @@ const Catagories = ({ data }) => {
     return (
         <div className='w-10/12 mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-10'>
             {
-                data?.map(catagory => <CatagoryCards catagory={catagory}/>)
+                (data ?? []).map(catagory => <CatagoryCards catagory={catagory}/>)
             }
         </div>
     );
