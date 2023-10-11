@@ -8,17 +8,17 @@ const CatagoryCards = ({ catagory }) => {
   return (
     <div>
       <Link to={`/donate/${id}`}>
-      <div className={`relative space-y-4 flex h-96 flex-col rounded-xl bg-[${card_color}] bg-clip-border text-gray-700 shadow-md`}>
+      <div style={{backgroundColor: `${card_color}`  }} className={`relative space-y-4 flex h-96 flex-col rounded-xl  bg-clip-border text-gray-700 shadow-md`}>
         <div className="relative m-0 overflow-hidden rounded-xl  bg-transparent bg-clip-border text-gray-700 shadow-none">
           <img src={image} alt="ui/ux review check" />
         </div>
         <div className="px-5">
-          <div className={`bg-[${category_color}] text-[${title_color}] text-lg w-1/3 text-center font-medium mt-2 px-2.5 py-0.5 rounded`}>
+          <div style={{backgroundColor: `${category_color}` , color: `${title_color}` }} className={`  text-lg w-1/3 text-center font-medium mt-2 px-2.5 py-0.5 rounded`}>
             {category}
           </div>
         </div>
         <div className="px-5">
-          <h4 className={`block font-sans text-3xl font-semibold text-[${title_color}] mb-4 antialiased`}>
+          <h4 style={{ color: `${title_color}` }} className={`block font-sans text-3xl font-semibold  mb-4 antialiased`}>
             {title}
           </h4>
         </div>

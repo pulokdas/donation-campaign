@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom';
 import Navbar from '../Components/Navbar';
 const Mainlayout =()=>{
 return(
-<div>
+<div className=' overflow-hidden'>
  <Navbar/>
 <Outlet/>
 </div>

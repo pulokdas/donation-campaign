@@ -5,17 +5,17 @@ import { useLoaderData, useParams } from 'react-router-dom';
 const Donate = () => {
     const [card, setcard] = useState({});
     const { id } = useParams();
-    console.log(id);
+    
 
     const data = useLoaderData();
-    console.log(data);
+    
     useEffect(() => {
         if (data) {
             const findCard = data.find((card) => card.id === id);
             setcard(findCard);
         }
     }, [id, data]);
-    console.log(card);
+    
     const { image, donate_amount, title_color, title, description } = card;
 
 
@@ -78,7 +78,7 @@ const Donate = () => {
             <div className="hero min-h-screen rounded-xl mt-5 relative" style={{ backgroundImage: `url(${image})` }}>
                 <div className="hero-overlay bg-opacity-60 h-48 absolute  bottom-0 "></div>
                 <div className='bg-black bg-opacity-40'>
-                    <button onClick={handleDonation} className={`btn px-10 rounded-lg text-3xl text-center bg-[${title_color}] text-white font-bold absolute bottom-14 left-5`}>Donate ${donate_amount}</button>
+                    <button style={{backgroundColor: `${title_color}`}} onClick={handleDonation} className={`btn px-10 rounded-lg text-3xl text-center  text-white font-bold absolute bottom-14 left-5`}>Donate ${donate_amount}</button>
                     <ToastContainer
                         position="top-right"
                         autoClose={5000}
