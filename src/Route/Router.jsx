@@ -4,10 +4,12 @@ import Home from '../Pages/Home/Home';
 import Donation from '../Pages/Donation/Donation';
 import Statistics from '../Pages/Statistics/Statistics';
 import Donate from '../Pages/Donation/Donate';
+import ErrorPage from '../Pages/error/ErrorPage';
 const router = createBrowserRouter([
     {
       path: "/",
       element:<Mainlayout/>,
+      errorElement: <ErrorPage />,
       children:[
         {
         path: "/",
@@ -17,6 +19,7 @@ const router = createBrowserRouter([
         {
         path: "/donation",
         element:<Donation/>,
+        errorElement: <ErrorPage />,
       },
         {
         path: "/Statistics",
@@ -25,7 +28,9 @@ const router = createBrowserRouter([
       {
         path: "/donate/:id",
         element:<Donate/>,
-        loader:()=> fetch('./donations.json')
+        loader:()=> fetch('./donations.json'),
+        errorElement: <ErrorPage />,
+        
       }
     ]
     },
