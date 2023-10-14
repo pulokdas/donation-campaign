@@ -31,7 +31,7 @@ const [buttonText , setButtonText]= useState("Show All")
     
 return(
 <div>
-     { Nodata ? <p>{Nodata}</p> : <div><div className='grid grid-cols-2 gap-5 w-11/12 mx-auto'> 
+     { Nodata ? <p>{Nodata}</p> : <div><div className='grid grid-cols-1 lg:grid-cols-2 gap-5 w-11/12 mx-auto'> 
         
         {
             isShow?donation.map(donatedCard=><DonatedCard donatedCard={donatedCard} />) :

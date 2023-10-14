@@ -10,7 +10,7 @@ const Statistics =()=>{
 return(
 <div className='flex flex-col gap-16 justify-center items-center h-screen'>
     <Piechart  donatedItems={donatedItems}/>
-    <div className='flex gap-20'>
+    <div className='flex flex-col lg:flex-row gap-20'>
         <div className='flex items-center gap-2'>
             <h1 className='text-lg font-semibold'>Total donation</h1>
             <div className='w-20 h-3 bg-[#FF444A] '> </div>
